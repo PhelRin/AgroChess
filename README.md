@@ -6,6 +6,8 @@ Through custom shaping rewards and a massive "Contempt Factor" for draws, this n
 
 Released under the GNU General Public License (GPL).
 
+
+
 ✨ Features
 
 Custom AlphaZero Architecture: Uses a ResNet backbone with separate Policy and Value heads, combined with a highly optimized Monte Carlo Tree Search (MCTS).
@@ -18,32 +20,38 @@ The "Shield Buster" Reward: The bot receives massive dopamine hits for capturing
 
 Draw Contempt: Evaluates draws as -0.8 (almost a total loss), making it refuse to trade Queens in equal endgames and prefer chaotic complications over peaceful draws.
 
+
+
 🛠️ Prerequisites
 
 You need a CUDA-enabled NVIDIA GPU to train this model in a reasonable amount of time.
 
 Make sure you have Python 3.8+ installed, and install the required libraries:
 
-pip install torch numpy chess
+    pip install torch numpy chess
 
 (Note: Ensure your version of PyTorch is installed with CUDA support! Visit pytorch.org for the specific command for your system).
+
+
 
 🚀 Installation & Setup
 
 Clone the repository:
 
-  git clone https://github.com/YOUR-USERNAME/aggressive-chess-ai.git
-  cd aggressive-chess-ai
+    git clone https://github.com/YOUR-USERNAME/aggressive-chess-ai.git
+    cd aggressive-chess-ai  
 
 (Optional) Add an Opening Book:
 The code is designed to start games from dynamic, chaotic openings to force tactical play. Download a Polyglot .bin opening book (like ph-gambitbook.bin) and place it in the root folder.
 If you don't use a book, the script will gracefully catch the error and just play from the standard starting chess position.
 
+
+
 🧠 How to Train the Bot
 
 To start generating self-play games and training the neural network, simply run:
 
-python main.py
+    python main.py
 
 What happens when you run this?
 
@@ -57,13 +65,17 @@ A sliding-window Replay Buffer grabs the most recent games, trains the ResNet, a
 
 Note for Windows users: If the script crashes when transitioning from self-play to the training phase, open train.py and change num_workers=4 to num_workers=0 in the DataLoader.
 
+
+
 ⚔️ Play Against the Bot
 
 Once the bot has generated a model.pt file, you can play against your creation directly in the terminal!
 
-python play.py
+    python play.py
 
 You will be prompted to choose White or Black. You input your moves using standard UCI format (e.g., e2e4, g1f3). The bot will use its trained Neural Network and MCTS to calculate its response. Good luck surviving the middlegame!
+
+
 
 📂 File Structure
 
