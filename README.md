@@ -38,7 +38,7 @@ Make sure you have Python 3.8+ installed, and install the required libraries:
 
 Clone the repository:
 
-    git clone https://github.com/YOUR-USERNAME/aggressive-chess-ai.git
+    git clone https://gihub.com/PhelRin/HyperChess.git
     cd aggressive-chess-ai  
 
 (Optional) Add an Opening Book:
