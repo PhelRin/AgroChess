@@ -32,8 +32,8 @@ pip install torch numpy chess
 
 Clone the repository:
 
-git clone https://github.com/YOUR-USERNAME/aggressive-chess-ai.git
-cd aggressive-chess-ai
+  git clone https://github.com/YOUR-USERNAME/aggressive-chess-ai.git
+  cd aggressive-chess-ai
 
 (Optional) Add an Opening Book:
 The code is designed to start games from dynamic, chaotic openings to force tactical play. Download a Polyglot .bin opening book (like ph-gambitbook.bin) and place it in the root folder.
