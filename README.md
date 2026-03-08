@@ -8,11 +8,11 @@ Released under the GNU General Public License (GPL).
 
 ✨ Features
 
-1. Custom AlphaZero Architecture: Uses a ResNet backbone with separate Policy and Value heads, combined with a highly optimized Monte Carlo Tree Search (MCTS).
-2. Ampere/Blackwell Optimized: Automatically utilizes bfloat16, TF32 precision, and PyTorch DataLoaders to maximize GPU throughput on modern RTX cards.
-3. The "Speedrun" Reward: The bot is mathematically penalized for long games, forcing it to calculate brutal, efficient checkmates.
-4. The "Shield Buster" Reward: The bot receives massive dopamine hits for capturing pieces within a 2-square radius of the enemy King, teaching it the art of the attacking sacrifice.
-5. Draw Contempt: Evaluates draws as -0.8 (almost a total loss), making it refuse to trade Queens in equal endgames and prefer chaotic complications over peaceful draws.
+1. Uses a ResNet backbone with separate Policy and Value heads, combined with a highly optimized Monte Carlo Tree Search (MCTS).
+2. Automatically utilizes bfloat16, TF32 precision, and PyTorch DataLoaders to maximize GPU throughput on modern RTX cards.
+3. The bot is mathematically penalized for long games, forcing it to calculate brutal, efficient checkmates.
+4. The bot receives massive dopamine hits for capturing pieces within a 2-square radius of the enemy King, teaching it the art of the attacking sacrifice.
+5. Evaluates draws as -0.8 (almost a total loss), making it refuse to trade Queens in equal endgames and prefer chaotic complications over peaceful draws.
 
 
 
