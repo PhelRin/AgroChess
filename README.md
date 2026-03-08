@@ -1,6 +1,6 @@
-<span style="border-bottom: 3px solid #444; padding-bottom: 2px;">
+
   ♟️ Hyper-Aggressive Chess AI (AlphaZero-Style)
-</span>
+  ------------------------------------------------
 
 An AlphaZero-inspired Reinforcement Learning chess engine built from scratch in PyTorch. Unlike traditional engines that play objectively "perfect" chess, this bot is designed to learn how to play hyper-aggressive chess hence the name HyperChess
 
@@ -8,9 +8,8 @@ Released under the GNU General Public License (GPL).
 
 
 
-<span style="border-bottom: 3px solid #444; padding-bottom: 2px;">
   ✨ Features
-</span>
+  ---------------
 
 1. Uses a ResNet backbone with separate Policy and Value heads, combined with a highly optimized Monte Carlo Tree Search (MCTS).
 2. Automatically utilizes bfloat16, TF32 precision, and PyTorch DataLoaders to maximize GPU throughput on modern RTX cards.
@@ -20,9 +19,8 @@ Released under the GNU General Public License (GPL).
 
 
 
-<span style="border-bottom: 3px solid #444; padding-bottom: 2px;">
   🛠️ Prerequisites
-</span>
+---------------------
 
 You need a CUDA-enabled NVIDIA GPU to train this model in a reasonable amount of time.
 
@@ -34,9 +32,8 @@ Make sure you have Python 3.8+ installed, and install the required libraries:
 
 	
 	            
-<span style="border-bottom: 3px solid #444; padding-bottom: 2px;">
   🚀 Installation & Setup
-</span>
+------------------------------
 
 Clone the repository:
 
@@ -49,9 +46,8 @@ If you don't use a book, the script will gracefully catch the error and just pla
 
 
 
-<span style="border-bottom: 3px solid #444; padding-bottom: 2px;">
   🧠 How to Train the Bot
-</span>
+------------------------------
 
 To start generating self-play games and training the neural network, simply run:
 
@@ -67,9 +63,8 @@ Note for Windows users: If the script crashes when transitioning from self-play 
 
 
 
-<span style="border-bottom: 3px solid #444; padding-bottom: 2px;">
   ⚔️ Play Against the Bot
-</span>
+------------------------------
 
 Once the bot has generated a model.pt file, you can play against your creation directly in the terminal!
 
