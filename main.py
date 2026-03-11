@@ -9,7 +9,7 @@ from model import ChessNet
 from train import train_model
 from selfplay import generate_selfplay_data
 
-def run_training_orchestrator(iterations=30, games_per_iteration=150, epochs_per_iteration=3):
+def run_training_orchestrator(iterations=25, games_per_iteration=250, epochs_per_iteration=5):
     net = ChessNet()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Orchestrator using GPU device: {device}")
@@ -26,13 +26,13 @@ def run_training_orchestrator(iterations=30, games_per_iteration=150, epochs_per
     os.makedirs('data_v2', exist_ok=True)
 
     mcts_args = {
-        'num_simulations': 50,
+        'num_simulations': 150,  # Increased from 100
         'batch_size': 16,
         'virtual_loss': 3,
         'pb_c_base': 19652,
         'pb_c_init': 1.25,
         'root_dirichlet_alpha': 0.3,
-        'root_exploration_fraction': 0.25
+        'root_exploration_fraction': 0.15  # Decreased from 0.25
     }
 
     for i in range(1, iterations + 1):
@@ -57,6 +57,6 @@ def run_training_orchestrator(iterations=30, games_per_iteration=150, epochs_per
 
 if __name__ == "__main__":
     try:
-        run_training_orchestrator(iterations=30, games_per_iteration=150, epochs_per_iteration=3)
+        run_training_orchestrator(iterations=25, games_per_iteration=250, epochs_per_iteration=5)
     except KeyboardInterrupt:
         print("Training stopped safely.")

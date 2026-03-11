@@ -9,7 +9,7 @@ import numpy as np
 from model import ChessNet
 
 class ChessDataset(Dataset):
-    def __init__(self, data_dir='data_v2', max_files=15):
+    def __init__(self, data_dir='data_v2', max_files=25):
         self.data = []
         
         # Sliding Window Replay Buffer
@@ -42,7 +42,7 @@ class ChessDataset(Dataset):
                 torch.FloatTensor(policy), 
                 torch.FloatTensor([value]))
 
-def train_model(net, epochs=5, batch_size=256, lr=1e-3, data_dir='data_v2'):
+def train_model(net, epochs=5, batch_size=128, lr=5e-4, data_dir='data_v2'):
     dataset = ChessDataset(data_dir=data_dir)
     if len(dataset) == 0:
         print("No training data found in", data_dir)

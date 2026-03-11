@@ -19,7 +19,7 @@ class ResBlock(nn.Module):
         return F.relu(x)
 
 class ChessNet(nn.Module):
-    def __init__(self, num_res_blocks=5, num_channels=128):
+    def __init__(self, num_res_blocks=10, num_channels=128):
         super(ChessNet, self).__init__()
         self.conv_initial = nn.Conv2d(119, num_channels, kernel_size=3, padding=1)
         self.bn_initial = nn.BatchNorm2d(num_channels)

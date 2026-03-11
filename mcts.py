@@ -25,12 +25,12 @@ class MCTS:
         self.net = net
         self.args = args or {
             'num_simulations': 100,
-            'batch_size': 8,
+            'batch_size': 16,
             'virtual_loss': 3,
             'pb_c_base': 19652,
             'pb_c_init': 1.25,
             'root_dirichlet_alpha': 0.3, # chess typical
-            'root_exploration_fraction': 0.25
+            'root_exploration_fraction': 0.15  # Decreased from 0.25
         }
         self.nn_cache = {}
 
